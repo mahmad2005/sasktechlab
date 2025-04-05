@@ -19,7 +19,7 @@ export default function Home() {
           SaskTechLab is a Regina-based engineering company providing end-to-end
           solutions in software development, hardware engineering, and IT services.
           We are dedicated to driving innovation through technology tailored for
-          industrial success.
+          industrial success. Coming soon.
         </p>
       </section>
 
