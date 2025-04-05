@@ -42,7 +42,7 @@ export default function Home() {
 			  {/* Mahibul Hasan */}
 			  <div className="bg-gray-50 shadow-lg rounded-2xl p-6 text-center">
 				<h3 className="text-xl font-semibold text-gray-800">Mahibul Hasan</h3>
-				<p className="text-green-700 font-medium mt-1">Dev-ops Lead</p>
+				<p className="text-green-700 font-medium mt-1">DevOps Lead</p>
 				<p className="text-sm text-gray-600 mt-2">MASc in Computer Science & Engineering,<br />University of Regina</p>
 			  </div>
 
