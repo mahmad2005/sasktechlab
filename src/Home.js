@@ -43,6 +43,15 @@ export default function Home() {
 				<p className="text-sm text-gray-600 mt-2">MASc in Computer Science & Engineering,<br />University of Regina</p>
 			  </div>
 
+/* 			  {/* SK Kafi Ahmed */}
+			  <div className="bg-gray-50 shadow-lg rounded-2xl p-6 text-center">
+				<h3 className="text-xl font-semibold text-gray-800">Sajid Khan Shaon</h3>
+				<p className="text-green-700 font-medium mt-1">Software Developer</p>
+				<p className="text-sm text-gray-600 mt-2">
+				  MASc in Software Systems Engineering,<br />University of Regina<br />
+				</p>
+			  </div> */
+
 			</div>
 		  </div>
 		</section>
