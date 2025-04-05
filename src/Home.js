@@ -1,16 +1,19 @@
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-gray-800">
-      {/* Hero Section */}
-      <section className="bg-green-900 text-white py-20 px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">SaskTech Lab</h1>
-        <p className="text-xl md:text-2xl mb-8">
-          Innovative Hardware and Software Solutions for Modern Industries
-        </p>
-        <button className="bg-white text-green-900 px-6 py-3 font-semibold rounded-full hover:bg-gray-200 transition">
-          Get Started
-        </button>
-      </section>
+		{/* Hero Section */}
+		<section className="bg-green-900 text-white py-20 px-4 text-center">
+		  <div className="flex items-center justify-center gap-4 mb-4">
+			<img src="/chipwhite.png" alt="SaskTech Lab Logo" className="h-20" />
+			<h1 className="text-4xl md:text-6xl font-bold">SaskTech Lab</h1>
+		  </div>
+		  <p className="text-xl md:text-2xl mb-8">
+			Innovative Hardware and Software Solutions for Modern Industries
+		  </p>
+		  <button className="bg-white text-green-900 px-6 py-3 font-semibold rounded-full hover:bg-gray-200 transition">
+			Get Started
+		  </button>
+		</section>
 
       {/* About Section */}
       <section className="py-16 px-6 max-w-5xl mx-auto">
@@ -46,7 +49,7 @@ export default function Home() {
  			  {/* Sajid Khan Shaon */}
 			  <div className="bg-gray-50 shadow-lg rounded-2xl p-6 text-center">
 				<h3 className="text-xl font-semibold text-gray-800">Sajid Khan Shaon</h3>
-				<p className="text-green-700 font-medium mt-1">Software Developer Lead</p>
+				<p className="text-green-700 font-medium mt-1">Software Development Lead</p>
 				<p className="text-sm text-gray-600 mt-2">
 				  MASc in Software Systems Engineering,<br />University of Regina<br />
 				</p>
