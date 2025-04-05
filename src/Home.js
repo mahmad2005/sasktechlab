@@ -3,7 +3,7 @@ export default function Home() {
     <div className="min-h-screen bg-white text-gray-800">
       {/* Hero Section */}
       <section className="bg-green-900 text-white py-20 px-4 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4">SaskTechLab</h1>
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">SaskTech Lab</h1>
         <p className="text-xl md:text-2xl mb-8">
           Innovative Hardware and Software Solutions for Modern Industries
         </p>
@@ -16,10 +16,10 @@ export default function Home() {
       <section className="py-16 px-6 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">About Us</h2>
         <p className="text-lg">
-          SaskTechLab is a Regina-based engineering company providing end-to-end
+          Saskatchewan technology Lab (SaskTech Lab) is a Regina-based engineering company providing end-to-end
           solutions in software development, hardware engineering, and IT services.
           We are dedicated to driving innovation through technology tailored for
-          industrial success. Coming soon.
+          industrial success. 
         </p>
       </section>
 	  
