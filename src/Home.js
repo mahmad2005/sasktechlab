@@ -22,6 +22,41 @@ export default function Home() {
           industrial success. Coming soon.
         </p>
       </section>
+	  
+	  {/* Team Section */}
+	  <section className="bg-white py-16">
+		  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<h2 className="text-3xl font-extrabold text-gray-900 text-center mb-12">Our Team</h2>
+			<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+			  
+			  {/* Maruf Ahmad */}
+			  <div className="bg-gray-50 shadow-lg rounded-2xl p-6 text-center">
+				<h3 className="text-xl font-semibold text-gray-800">Maruf Ahmad</h3>
+				<p className="text-green-700 font-medium mt-1">Operation Lead</p>
+				<p className="text-sm text-gray-600 mt-2">MASc in Electronic Systems Engineering,<br />University of Regina</p>
+			  </div>
+
+			  {/* Mahibul Hasan */}
+			  <div className="bg-gray-50 shadow-lg rounded-2xl p-6 text-center">
+				<h3 className="text-xl font-semibold text-gray-800">Mahibul Hasan</h3>
+				<p className="text-green-700 font-medium mt-1">Dev-ops Lead</p>
+				<p className="text-sm text-gray-600 mt-2">MASc in Computer Science & Engineering,<br />University of Regina</p>
+			  </div>
+
+			  {/* SK Kafi Ahmed */}
+			  <div className="bg-gray-50 shadow-lg rounded-2xl p-6 text-center">
+				<h3 className="text-xl font-semibold text-gray-800">SK Kafi Ahmed</h3>
+				<p className="text-green-700 font-medium mt-1">Advisor</p>
+				<p className="text-sm text-gray-600 mt-2">
+				  FEA - Design Engineer at Brandt<br />
+				  MASc in Industrial Systems Engineering,<br />University of Regina<br />
+				  Aeronautical Engineer
+				</p>
+			  </div>
+
+			</div>
+		  </div>
+		</section>
 
       {/* Services Section */}
       <section className="py-16 px-6 bg-gray-50">
