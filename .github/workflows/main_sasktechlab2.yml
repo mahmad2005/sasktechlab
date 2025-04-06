@@ -60,6 +60,5 @@ jobs:
         with:
           app-name: 'sasktechlab2'
           slot-name: 'Production'
-          package: .
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8F0D274A52CB422BB84C78CA79D6E0E3 }}
           package: build
