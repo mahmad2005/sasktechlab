@@ -7,7 +7,7 @@ export default function AboutPage() {
       {/* Navigation Bar */}
       <nav className="flex justify-between items-center bg-white shadow px-6 py-4 sticky top-0 z-50">
         <div className="flex items-center gap-2">
-          <img src="/chip.png" alt="Logo" className="h-6 w-6" />
+          <img src="/chip.png" alt="Logo" className="h-12 w-12" />
           <span className="font-extrabold text-lg text-green-800">SaskTech Lab</span>
         </div>
         <ul className="hidden md:flex gap-6 text-sm font-medium text-gray-800">
