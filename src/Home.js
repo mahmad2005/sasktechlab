@@ -133,7 +133,7 @@ export default function LandingPage() {
             <div key={idx} className="bg-white p-6 rounded shadow">
               <h3 className="font-semibold mb-2">{project.title}</h3>
               <p className="text-sm text-gray-600 mb-4">{project.description}</p>
-              <a className="text-sm text-green-600 hover:underline" href="#">View Case Study →</a>
+              <a className="text-sm text-green-600 hover:underline" href="/Contact">View Case Study →</a>
             </div>
           ))}
         </div>

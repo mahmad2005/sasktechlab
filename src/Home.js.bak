@@ -12,12 +12,12 @@ export default function LandingPage() {
         </div>
         <ul className="hidden md:flex gap-6 text-sm font-medium text-gray-800">
           <li><Link to="/" className="hover:text-green-700">Home</Link></li>
-		  <li><Link to="/about" className="hover:text-green-700">About Us</Link></li>
+          <li><Link to="/about" className="hover:text-green-700">About Us</Link></li>
           <li><Link to="/services" className="hover:text-green-700">Services</Link></li>
-		  <li><Link to="/ourmodel" className="hover:text-green-700">Our Model</Link></li>
-          <li className="hover:text-green-700 cursor-pointer">Projects</li>
-          <li className="hover:text-green-700 cursor-pointer">Careers</li>
-          <li className="hover:text-green-700 cursor-pointer">Contact</li>
+          <li><Link to="/ourmodel" className="hover:text-green-700">Our Model</Link></li>
+          <li><Link to="/projects" className="hover:text-green-700">Projects</Link></li>
+          <li><Link to="/careers" className="hover:text-green-700">Careers</Link></li>
+          <li><Link to="/contact" className="hover:text-green-700">Contact</Link></li>
         </ul>
         <button className="bg-orange-500 text-white font-semibold px-4 py-2 rounded hover:bg-orange-600 text-sm">
           Work With Us
