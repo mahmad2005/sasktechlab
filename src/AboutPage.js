@@ -161,6 +161,12 @@ export default function AboutPage() {
               bio: "MASc in Software Systems Engineering, University of Regina",
               desc: "Rizwan blends front-end skills with business insight to build intuitive and goal-driven user interfaces.",
             },
+			{
+              name: "Sami Alkassab",
+              title: "Embedded Systems Engineer",
+              bio: "BSc in Electronic Systems Engineering, University of Regina",
+              desc: "Sami specializes in embedded systems development, with a strong focus on hardware integration, firmware design, and real-time applications.",
+            },
           ].map((person, i) => (
             <div key={i} className="bg-gray-50 shadow rounded p-6 text-left">
               <h4 className="text-lg font-semibold text-gray-800 mb-1">{person.name}</h4>
