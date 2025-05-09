@@ -156,6 +156,12 @@ export default function AboutPage() {
               desc: "Sajid leads our software development initiatives, specializing in web applications, mobile development, and AI integration.",
             },
 			{
+              name: "Saima Zarka",
+              title: "Graphic Designer | Digital Marketer | IT Consultant",
+              bio: "BSc & MSc in IT, Jahangirnagar University, Bangladesh",
+              desc: "Saima blends creativity with technical expertise, offering graphic design, digital marketing, and IT solutions to help brands grow and stand out online.",
+            },
+			{
               name: "S M Rizwan Islam Rhythm",
               title: "Front-End Developer | Business Analyst",
               bio: "MASc in Software Systems Engineering, University of Regina",
