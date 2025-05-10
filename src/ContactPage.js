@@ -78,7 +78,7 @@ export default function ContactPage() {
           <ul className="text-sm text-gray-800 space-y-3">
             <li><strong>Visit Us</strong><br />I-4212 Castle Rd<br />Regina, SK S4S 4W1<br />Canada</li>
             <li><strong>Email Us</strong><br />info@sasktechlab.com</li>
-            <li><strong>Call Us</strong><br />(306) 529-0274</li>
+            <li><strong>Call Us</strong><br /> +1(581) 701-0001</li>
             <li><strong>Office Hours</strong><br />Mon–Fri: 9:00 AM – 5:00 PM CST<br />Weekends: Closed</li>
           </ul>
         </div>
@@ -197,7 +197,7 @@ export default function ContactPage() {
           <div>
             <h4 className="font-semibold mb-2">Contact Us</h4>
             <p>I-4212 Castle Rd<br />Regina, SK S4S 4W1<br />Canada</p>
-            <p>Email: info@sasktechlab.com<br />Phone: (306) 529-0274</p>
+            <p>Email: info@sasktechlab.com<br />Phone: +1(581) 701-0001</p>
           </div>
         </div>
         <div className="text-center mt-8 text-gray-400">
