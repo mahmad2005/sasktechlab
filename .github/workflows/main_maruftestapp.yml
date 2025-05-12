@@ -1,4 +1,4 @@
-name: Build and deploy React app to Azure Web App - MarufTestApp
+name: Build and Deploy React App with Node Backend to Azure Web App - MarufTestApp
 
 on:
   push:
@@ -19,36 +19,32 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x' # Your target Node version
+          node-version: '18'  # Use 18 for better stability with most packages
 
       - name: Install dependencies
         run: npm install
 
       - name: Build React app
-        run: npm run build # This creates the 'build' folder
+        run: npm run build
 
-      # --- MODIFICATION START ---
       - name: Prepare deployment package
         run: |
           mkdir deploy_package
-          cp -r build/* deploy_package/  # Copy contents of build to the root of deploy_package
+          cp -r build deploy_package/
           cp server.js deploy_package/
           cp package.json deploy_package/
-          cp package-lock.json deploy_package/
-          # IMPORTANT: Do NOT copy node_modules. Azure will install them.
-          # If you have other essential root files (like a .env for server, though better to use App Settings), copy them too.
+          cp package-lock.json deploy_package/ || echo "No lock file to copy"
 
       - name: Zip deployment package
         run: |
           cd deploy_package
           zip -r ../release.zip .
           cd ..
-      # --- MODIFICATION END ---
 
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
         with:
-          name: node-app # Changed artifact name for clarity, but not strictly necessary
+          name: node-app
           path: release.zip
 
   deploy:
@@ -62,16 +58,7 @@ jobs:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: node-app # Match artifact name from build job
-
-      # --- MODIFICATION START ---
-      # No need to unzip and then specify a subfolder if the zip is structured correctly.
-      # The azure/webapps-deploy action can deploy a zip file directly.
-      # It will extract it to /home/site/wwwroot.
-      # Remove the unzip step if you want the action to handle the zip directly.
-      # - name: Unzip artifact for deployment
-      #   run: unzip release.zip
-      # --- MODIFICATION END ---
+          name: node-app
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
@@ -80,4 +67,4 @@ jobs:
           app-name: 'MarufTestApp'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8996A5A587E94E05934DC038DE1FC4B2 }}
-          package: release.zip # Deploy the zip directly
+          package: release.zip
