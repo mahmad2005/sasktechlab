@@ -37,9 +37,11 @@ export default function LandingPage() {
 
 		{/* CTA Button */}
 		<div className="hidden md:block">
+		<Link to="/contact">
 		  <button className="bg-orange-500 text-white font-semibold px-4 py-2 rounded hover:bg-orange-600 text-sm">
 			Work With Us
 		  </button>
+		</Link>
 		</div>
 	  </div>
 
@@ -53,9 +55,11 @@ export default function LandingPage() {
 		  <Link to="/projects" className="hover:text-green-700">Projects</Link>
 		  <Link to="/careers" className="hover:text-green-700">Careers</Link>
 		  <Link to="/contact" className="hover:text-green-700">Contact</Link>
+		  <Link to="/contact">
 		  <button className="bg-orange-500 text-white font-semibold px-4 py-2 rounded hover:bg-orange-600 text-sm">
 			Work With Us
 		  </button>
+		  </Link>
 		</div>
 	  )}
 	</nav>
@@ -201,8 +205,8 @@ export default function LandingPage() {
         <h2 className="text-xl font-semibold mb-6">Ready to Work With Us?</h2>
         <p className="mb-6 text-sm">Whether you need engineering solutions or want to join our talent development program</p>
         <div className="flex justify-center gap-4 flex-wrap">
-          <button className="bg-orange-500 px-6 py-3 rounded hover:bg-orange-600">Submit a Project</button>
-          <button className="bg-blue-600 px-6 py-3 rounded hover:bg-blue-700">Join Our Team</button>
+          <Link to="/contact"><button className="bg-orange-500 px-6 py-3 rounded hover:bg-orange-600">Submit a Project</button></Link>
+          <Link to="/contact"><button className="bg-blue-600 px-6 py-3 rounded hover:bg-blue-700">Join Our Team</button></Link>
           <button className="bg-purple-600 px-6 py-3 rounded hover:bg-purple-700">Become a Mentor</button>
         </div>
       </section>
