@@ -1,4 +1,4 @@
-name: Direct Deploy to Azure Web App - MarufTestApp
+name: Build and Deploy React App - MarufTestApp
 
 on:
   push:
@@ -7,17 +7,34 @@ on:
   workflow_dispatch:
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Create deployment folder excluding unwanted dirs
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build React app
+        run: npm run build
+
+      - name: Prepare deployment package
         run: |
           mkdir deploy_package
-          rsync -av --exclude='.git' --exclude='.github' --exclude='node_modules' . deploy_package/
+          rsync -av \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='node_modules' \
+            . deploy_package/
+          # Make sure build folder exists
+          mv build deploy_package/
 
       - name: Zip deployment package
         run: |
@@ -32,7 +49,6 @@ jobs:
           path: release.zip
 
       - name: Deploy to Azure Web App
-        id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'MarufTestApp'

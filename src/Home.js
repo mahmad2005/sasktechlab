@@ -207,7 +207,7 @@ export default function LandingPage() {
         <div className="flex justify-center gap-4 flex-wrap">
           <Link to="/contact"><button className="bg-orange-500 px-6 py-3 rounded hover:bg-orange-600">Submit a Project</button></Link>
           <Link to="/contact"><button className="bg-blue-600 px-6 py-3 rounded hover:bg-blue-700">Join Our Team</button></Link>
-          <button className="bg-purple-600 px-6 py-3 rounded hover:bg-purple-700">Become a Mentor</button>
+          <Link to="/contact"><button className="bg-purple-600 px-6 py-3 rounded hover:bg-purple-700">Become a Mentor</button></Link>
         </div>
       </section>
 
