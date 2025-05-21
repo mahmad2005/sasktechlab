@@ -69,8 +69,16 @@ export default function LandingPage() {
           SaskTech Lab delivers innovative engineering solutions while developing the next generation of tech talent through mentorship and real-world projects.
         </p>
         <div className="flex justify-center gap-4 flex-wrap">
-          <button className="bg-orange-500 text-white px-6 py-3 rounded hover:bg-orange-600">Submit a Project</button>
-          <button className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700">Join Our Team</button>
+			<Link to="/contact">
+			  <button className="bg-orange-500 px-6 py-3 rounded hover:bg-orange-600">
+				Submit a Project
+			  </button>
+			</Link>
+			<Link to="/contact">
+			  <button className="bg-blue-600 px-6 py-3 rounded hover:bg-blue-700">
+				Join Our Team
+			  </button>
+			</Link>
         </div>
       </section>
 
@@ -229,7 +237,7 @@ export default function LandingPage() {
           <div>
             <h4 className="font-semibold mb-2">Contact Us</h4>
             <p>I-4212 Castle Rd<br />Regina, SK S4S 4W1<br />Canada</p>
-            <p>Email: info@sasktechlab.com<br />Phone: +1(581) 701-0001</p>
+            <p>Email: info@sasktechlab.ca<br />Phone: +1(581) 701-0001</p>
           </div>
         </div>
         <div className="text-center mt-8 text-gray-400">
