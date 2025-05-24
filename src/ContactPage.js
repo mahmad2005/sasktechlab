@@ -1,6 +1,30 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const name = form[0].value;
+  const email = form[1].value;
+  const phone = form[2].value;
+  const subject = form[3].value;
+  const message = form[4].value;
+
+  try {
+    const response = await fetch('/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, email, phone, subject, message })
+    });
+
+    const result = await response.json();
+    alert(result.message || "Submission successful.");
+  } catch (error) {
+    alert("Failed to send message. Please try again later.");
+  }
+};
+
+
 export default function ContactPage() {
 	const [mobileOpen, setMobileOpen] = useState(false);
   return (
@@ -85,7 +109,7 @@ export default function ContactPage() {
 
         <div className="border p-6 rounded shadow">
           <h2 className="text-xl font-bold mb-4">Send Us a Message</h2>
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <input type="text" placeholder="Your Name" className="w-full border px-4 py-2 rounded" />
             <input type="email" placeholder="Email Address" className="w-full border px-4 py-2 rounded" />
             <input type="text" placeholder="Phone Number (Optional)" className="w-full border px-4 py-2 rounded" />
