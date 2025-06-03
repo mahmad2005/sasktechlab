@@ -64,7 +64,21 @@ export default function LandingPage() {
 		<div className="mt-4 md:hidden flex flex-col gap-4 text-sm font-medium text-gray-800">
 		  <Link to="/" className="hover:text-green-700">Home</Link>
 		  <Link to="/about" className="hover:text-green-700">About Us</Link>
-		  <Link to="/services" className="hover:text-green-700">Services</Link>
+			<li className="relative group">
+			  <button className="hover:text-green-700">Services</button>
+			  <ul className="absolute hidden group-hover:block bg-white shadow-lg rounded py-2 w-64 z-50">
+				<li>
+				  <Link to="/services" className="block px-4 py-2 hover:bg-gray-100 text-sm text-gray-800">
+					All Services
+				  </Link>
+				</li>
+				<li>
+				  <Link to="/callentica" className="block px-4 py-2 hover:bg-gray-100 text-sm text-gray-800">
+					Callentica – AI Voice Assistant
+				  </Link>
+				</li>
+			  </ul>
+			</li>
 		  <Link to="/ourmodel" className="hover:text-green-700">Our Model</Link>
 		  <Link to="/projects" className="hover:text-green-700">Projects</Link>
 		  <Link to="/careers" className="hover:text-green-700">Careers</Link>
