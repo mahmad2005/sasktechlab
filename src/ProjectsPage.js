@@ -28,7 +28,21 @@ export default function ProjectsPage() {
 		<ul className="hidden md:flex gap-6 text-sm font-medium text-gray-800">
 		  <li><Link to="/" className="hover:text-green-700">Home</Link></li>
 		  <li><Link to="/about" className="hover:text-green-700">About Us</Link></li>
-		  <li><Link to="/services" className="hover:text-green-700">Services</Link></li>
+		  <li className="relative group">
+			 <button className="hover:text-green-700">Services</button>
+			  <ul className="absolute hidden group-hover:block bg-white shadow-lg rounded py-2 w-64 z-50">
+				<li>
+				  <Link to="/services" className="block px-4 py-2 hover:bg-gray-100 text-sm text-gray-800">
+					All Services
+				  </Link>
+				</li>
+				<li>
+				  <Link to="/callentica" className="block px-4 py-2 hover:bg-gray-100 text-sm text-gray-800">
+					Callentica – AI Voice Assistant
+				  </Link>
+				</li>
+			 </ul>
+		  </li>
 		  <li><Link to="/ourmodel" className="hover:text-green-700">Our Model</Link></li>
 		  <li><Link to="/projects" className="hover:text-green-700">Projects</Link></li>
 		  <li><Link to="/careers" className="hover:text-green-700">Careers</Link></li>

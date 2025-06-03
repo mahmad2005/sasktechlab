@@ -9,6 +9,7 @@ import ProjectsPage from "./ProjectsPage";
 import CareersPage from "./CareersPage";
 import ContactPage from "./ContactPage";
 import NotFoundPage from "./NotFoundPage"; // <--- IMPORT THE NEW COMPONENT
+import CallenticaPage from './CallenticaPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/careers" element={<CareersPage />} />
         <Route path="/contact" element={<ContactPage />} />
+		<Route path="/callentica" element={<CallenticaPage />} />
         <Route path="*" element={<NotFoundPage />} /> {/* <--- ADD THIS CATCH-ALL ROUTE AT THE END */}
       </Routes>
     </Router>
