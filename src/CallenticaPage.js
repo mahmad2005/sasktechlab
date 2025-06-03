@@ -164,9 +164,9 @@ export default function CallenticaPage() {
       <section className="bg-green-900 text-white py-16 text-center">
         <h2 className="text-xl font-semibold mb-4">Interested in Trying Collentica?</h2>
         <p className="text-sm mb-4">Let us help you capture more customers and offer 24/7 service without added staffing costs.</p>
-        <p className="text-sm">📧 Email: contact@sasktechlab.com</p>
-        <p className="text-sm">📞 Phone: +1 (581) 701-0001</p>
-        <p className="text-sm mb-6">🌐 Website: <a href="https://www.sasktechlab.com" className="underline">www.sasktechlab.com</a></p>
+        <p className="text-sm">📧 Email: info@sasktechlab.ca</p>
+        <p className="text-sm">📞 Phone: +1 (306) 529-0274</p>
+        <p className="text-sm mb-6">🌐 Website: <a href="https://www.sasktechlab.ca" className="underline">www.sasktechlab.com</a></p>
         <Link to="/contact">
           <button className="bg-orange-500 px-6 py-3 rounded hover:bg-orange-600">
             Book a Demo
