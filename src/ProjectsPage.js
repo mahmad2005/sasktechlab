@@ -9,10 +9,12 @@ export default function ProjectsPage() {
 	<nav className="bg-white shadow px-6 py-4 sticky top-0 z-50">
 	  <div className="flex items-center justify-between">
 		{/* Logo */}
-		<div className="flex items-center gap-2">
-		  <img src="/chip.png" alt="Logo" className="h-12 w-12" />
-		  <span className="font-extrabold text-lg text-green-800">SaskTech Lab</span>
-		</div>
+		<Link to="/">
+		  <div className="flex items-center gap-2">
+		    <img src="/chip.png" alt="Logo" className="h-12 w-12" />
+			<span className="font-extrabold text-lg text-green-800">SaskTech Lab</span>
+		   </div>
+		</Link>
 
 		{/* Mobile Menu Toggle */}
 		<div className="md:hidden">

@@ -9,10 +9,12 @@ export default function CallenticaPage() {
 		<nav className="bg-white shadow px-6 py-4 sticky top-0 z-50">
 		  <div className="flex items-center justify-between">
 			{/* Logo */}
-			<div className="flex items-center gap-2">
-			  <img src="/chip.png" alt="Logo" className="h-12 w-12" />
-			  <span className="font-extrabold text-lg text-green-800">SaskTech Lab</span>
-			</div>
+			<Link to="/">
+			  <div className="flex items-center gap-2">
+				<img src="/chip.png" alt="Logo" className="h-12 w-12" />
+				<span className="font-extrabold text-lg text-green-800">SaskTech Lab</span>
+			   </div>
+			</Link>
 
 			{/* Mobile Menu Toggle */}
 			<div className="md:hidden">
@@ -166,7 +168,7 @@ export default function CallenticaPage() {
         <p className="text-sm mb-4">Let us help you capture more customers and offer 24/7 service without added staffing costs.</p>
         <p className="text-sm">📧 Email: info@sasktechlab.ca</p>
         <p className="text-sm">📞 Phone: +1 (306) 529-0274</p>
-        <p className="text-sm mb-6">🌐 Website: <a href="https://www.sasktechlab.ca" className="underline">www.sasktechlab.com</a></p>
+        <p className="text-sm mb-6">🌐 Website: <a href="https://www.sasktechlab.ca" className="underline">www.sasktechlab.ca</a></p>
         <Link to="/contact">
           <button className="bg-orange-500 px-6 py-3 rounded hover:bg-orange-600">
             Book a Demo
