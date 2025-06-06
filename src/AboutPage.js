@@ -174,40 +174,57 @@ export default function AboutPage() {
               title: "Operation Lead",
               bio: "MASc in Electronic Systems Engineering, University of Regina",
               desc: "Maruf leads our operations and hardware engineering initiatives, bringing extensive experience in electronic systems design and project management.",
+			  linkedin: "https://www.linkedin.com/in/marufahmad2005/",
             },
             {
               name: "Mahibul Hasan",
               title: "DevOps Lead",
               bio: "MASc in Computer Science & Engineering, University of Regina",
               desc: "Mahibul oversees our DevOps practices and cloud infrastructure, ensuring seamless deployment and operation of our software solutions.",
+			  linkedin: "https://www.linkedin.com/in/mahibulhasan/",
             },
             {
               name: "Sajid Khan Shaon",
               title: "Software Development Lead",
               bio: "MASc in Software Systems Engineering, University of Regina",
               desc: "Sajid leads our software development initiatives, specializing in web applications, mobile development, and AI integration.",
+			  linkedin: "https://www.linkedin.com/in/md-sajid-khan-7a193654/",
             },
 			{
               name: "Saima Zarka",
               title: "Graphic Designer | Digital Marketer | IT Consultant",
               bio: "BSc & MSc in IT, Jahangirnagar University, Bangladesh",
               desc: "Saima blends creativity with technical expertise, offering graphic design, digital marketing, and IT solutions to help brands grow and stand out online.",
+			  linkedin: "https://www.linkedin.com/in/saima-zarka/",
+            },
+			{
+              name: "Nasik Sami Khan",
+              title: "AI Engineer",
+              bio: "MSc in Computer Science, University of Regina",
+              desc: "Nasik specializes in AI/ML, Generative AI, and software engineering, with expertise in building scalable AI-powered solutions. He brings experience in LLM, NLP, cloud technologies, and enterprise-grade AI applications to drive innovation across our projects.",
+			  linkedin: "https://www.linkedin.com/in/nasiksami/",
             },
 			{
               name: "S M Rizwan Islam Rhythm",
               title: "Front-End Developer | Business Analyst",
               bio: "MASc in Software Systems Engineering, University of Regina",
               desc: "Rizwan blends front-end skills with business insight to build intuitive and goal-driven user interfaces.",
+			  linkedin: "https://www.linkedin.com/in/s-m-rizwan-islam/",
             },
 			{
               name: "Sami Alkassab",
               title: "Embedded Systems Engineer",
               bio: "BSc in Electronic Systems Engineering, University of Regina",
               desc: "Sami specializes in embedded systems development, with a strong focus on hardware integration, firmware design, and real-time applications.",
+			  linkedin: "https://www.linkedin.com/in/sami-alkassab-1a7b1030a/",
             },
           ].map((person, i) => (
             <div key={i} className="bg-gray-50 shadow rounded p-6 text-left">
-              <h4 className="text-lg font-semibold text-gray-800 mb-1">{person.name}</h4>
+				<h4 className="text-lg font-semibold text-gray-800 mb-1">
+				  <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-green-700">
+					{person.name}
+				  </a>
+				</h4>
               <p className="text-green-700 font-medium text-sm mb-1">{person.title}</p>
               <p className="text-sm text-gray-600 mb-2">{person.bio}</p>
               <p className="text-sm text-gray-700">{person.desc}</p>
