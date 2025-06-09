@@ -23,45 +23,45 @@ export default function FloatingChatbot() {
     }
   };
 
-  const sendMessage = async () => {
-    if (!input.trim()) return;
+const sendMessage = async () => {
+  if (!input.trim()) return;
 
-    // Add user message
-    const newMessages = [...messages, { role: 'user', text: input }];
-    setMessages(newMessages);
+  // Add user message
+  const newMessages = [...messages, { role: 'user', text: input }];
+  setMessages(newMessages);
 
-    // Clear input
-    setInput('');
+  // Clear input
+  setInput('');
 
-    try {
-      const res = await fetch(`${CHATBOT_SERVER_ADDRESS}/api/chat`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ message: input })
-      });
+  try {
+    const res = await fetch(`${CHATBOT_SERVER_ADDRESS}/api/chat`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message: input })
+    });
 
-      const data = await res.json();
+    const data = await res.json();
 
-      // Add bot reply (Agentica)
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        { role: 'user', text: input },
-        {
-          role: 'agentica',
-          text: data.response || 'Sorry, I could not process your request.'
-        }
-      ]);
-    } catch (err) {
-      console.error('Error:', err);
-      setMessages((prevMessages) => [
-        ...prevMessages,
-        {
-          role: 'agentica',
-          text: 'An error occurred while processing your request.'
-        }
-      ]);
-    }
-  };
+    // Only add bot reply here (NO user message again)
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      {
+        role: 'agentica',
+        text: data.response || 'Sorry, I could not process your request.'
+      }
+    ]);
+  } catch (err) {
+    console.error('Error:', err);
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      {
+        role: 'agentica',
+        text: 'An error occurred while processing your request.'
+      }
+    ]);
+  }
+};
+
 
   // Auto-scroll to bottom when messages change
   useEffect(() => {
