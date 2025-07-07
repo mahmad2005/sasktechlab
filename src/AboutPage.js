@@ -231,7 +231,7 @@ export default function AboutPage() {
 				src={`/faces/${person.name.toLowerCase().replace(/\s+/g, "-")}.jpg`}
 				onError={(e) => { e.target.onerror = null; e.target.src = '/faces/default.jpg'; }}
 				alt={person.name}
-				className="w-28 h-28 mx-auto mb-4 rounded-full object-cover border border-gray-300"
+				className="w-32 h-32 mx-auto mb-4 rounded-full object-cover border border-gray-300"
 			  />
 			  <h4 className="text-lg font-semibold text-gray-800 mb-1">
 				<a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-green-700">
