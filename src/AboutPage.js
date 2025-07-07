@@ -198,6 +198,13 @@ export default function AboutPage() {
 			  linkedin: "https://www.linkedin.com/in/saima-zarka/",
             },
 			{
+			  name: "Afrina Najib",
+			  title: "HR & Administrative Officer",
+			  bio: "Master’s in Human Resource Management, University of Regina",
+			  desc: "Afrina brings a unique combination of technical and administrative expertise to support our team operations and talent development.",
+			  linkedin: "https://www.linkedin.com/in/afrina-najib-13987915a/",
+			},
+			{
               name: "Nasik Sami Khan",
               title: "AI Engineer",
               bio: "MSc in Computer Science, University of Regina",
