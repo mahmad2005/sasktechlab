@@ -226,16 +226,24 @@ export default function AboutPage() {
 			  linkedin: "https://www.linkedin.com/in/sami-alkassab-1a7b1030a/",
             },
           ].map((person, i) => (
-            <div key={i} className="bg-gray-50 shadow rounded p-6 text-left">
+            <div key={i} className="bg-gray-50 shadow rounded p-6 text-left flex items-start gap-4">
+			  <img
+				src={`/faces/${person.name.toLowerCase().replace(/\s+/g, "-")}.jpg`}
+				onError={(e) => { e.target.onerror = null; e.target.src = '/faces/default.jpg'; }}
+				alt={person.name}
+				className="w-20 h-20 rounded-full object-cover border border-gray-300"
+			  />
+			  <div>
 				<h4 className="text-lg font-semibold text-gray-800 mb-1">
 				  <a href={person.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-green-700">
 					{person.name}
 				  </a>
 				</h4>
-              <p className="text-green-700 font-medium text-sm mb-1">{person.title}</p>
-              <p className="text-sm text-gray-600 mb-2">{person.bio}</p>
-              <p className="text-sm text-gray-700">{person.desc}</p>
-            </div>
+				<p className="text-green-700 font-medium text-sm mb-1">{person.title}</p>
+				<p className="text-sm text-gray-600 mb-2">{person.bio}</p>
+				<p className="text-sm text-gray-700">{person.desc}</p>
+			  </div>
+			</div>
           ))}
         </div>
       </section>
